@@ -1,3 +1,5 @@
+'use strict';
+
 const chai = require('chai');
 chai.use(require('chai-fuzzy'));
 const expect = chai.expect;
@@ -13,8 +15,8 @@ function pretty(obj) {
   return util.inspect(obj, false, 20, true)
 };
 
-import ReadImap from "../../lib/read-imap";
-import hoodiecrow from "hoodiecrow";
+const ReadImap = require("../lib/read-imap");
+const hoodiecrow = require("hoodiecrow-imap");
 
 // test data for our mock server
 const makeHoodiecrowConfig = require("./hoodiecrow-config");
